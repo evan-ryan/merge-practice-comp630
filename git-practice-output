@@ -1,0 +1,176 @@
+(base) evan@evan-VirtualBox:~$ cd COMP630
+(base) evan@evan-VirtualBox:~/COMP630$ git clone https://github.com/unh-comp-698-systems-software/git-practice.git
+Cloning into 'git-practice'...
+remote: Enumerating objects: 131, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 131 (delta 0), reused 2 (delta 0), pack-reused 128
+Receiving objects: 100% (131/131), 14.36 KiB | 864.00 KiB/s, done.
+Resolving deltas: 100% (64/64), done.
+(base) evan@evan-VirtualBox:~/COMP630$ ls
+git-practice
+(base) evan@evan-VirtualBox:~/COMP630$ cd git-practice/
+(base) evan@evan-VirtualBox:~/COMP630/git-practice$ git reflog
+a28c1fb (HEAD -> master, origin/master, origin/HEAD) HEAD@{0}: clone: from https://github.com/unh-comp-698-systems-software/git-practice.git
+(base) evan@evan-VirtualBox:~/COMP630/git-practice$ git checkout main
+error: pathspec 'main' did not match any file(s) known to git
+(base) evan@evan-VirtualBox:~/COMP630/git-practice$ git checkout master
+Already on 'master'
+Your branch is up to date with 'origin/master'.
+(base) evan@evan-VirtualBox:~/COMP630/git-practice$ git checkout -b alter-readme
+Switched to a new branch 'alter-readme'
+(base) evan@evan-VirtualBox:~/COMP630/git-practice$ vim editor.md
+(base) evan@evan-VirtualBox:~/COMP630/git-practice$ nano editor.md 
+(base) evan@evan-VirtualBox:~/COMP630/git-practice$ git add .
+(base) evan@evan-VirtualBox:~/COMP630/git-practice$ git commit -m 'added editor.md'
+[alter-readme 1011c61] added editor.md
+ 1 file changed, 1 insertion(+)
+ create mode 100644 editor.md
+(base) evan@evan-VirtualBox:~/COMP630/git-practice$ git log
+commit 1011c6175291bc54549f92557dba7cab18f3f44a (HEAD -> alter-readme)
+Author: evan-ryan <ewr1010@wildcats.unh.edu>
+Date:   Thu Sep 16 18:15:14 2021 -0400
+
+    added editor.md
+
+commit a28c1fb339db41cbbaa59df280e18bf124715564 (origin/master, origin/HEAD, master)
+Author: Dan Couture <mathyourlife@gmail.com>
+Date:   Sat Jan 16 09:36:52 2021 -0500
+
+    adding grading script
+
+commit 60e5d6ea7a0c8a97bce99acc61d738f20288bfe3
+Author: Dan Couture <mathyourlife@gmail.com>
+Date:   Wed Mar 1 07:38:51 2017 -0500
+
+    Fixing markdown numbering
+
+commit adc4f632a3b8bd70532a1b6c4dfe6f440e7ba3de
+Author: Dan Couture <mathyourlife@gmail.com>
+Date:   Wed Mar 1 06:56:34 2017 -0500
+
+    finishing push notes in README.md
+
+commit ec381247ba607fa6443ce85dfcb9fb7e5649bff6
+Author: Dan Couture <mathyourlife@gmail.com>
+Date:   Wed Mar 1 06:52:39 2017 -0500
+
+    Adding exercise generation script
+
+commit bac04980e60ccce308eb652d193f15257cc5b56f (origin/K)
+Author: Dan Couture <mathyourlife@gmail.com>
+Date:   Wed Mar 1 06:14:19 2017 -0500
+
+    Adding exercises to README.md
+
+commit 06d31dae6ebf4f0a53eefee778389824dd649fd2
+Author: Dan Couture <MathYourLife@users.noreply.github.com>
+Date:   Wed Mar 1 06:11:49 2017 -0500
+
+    Initial commit
+(base) evan@evan-VirtualBox:~/COMP630/git-practice$ nano Git-Practice-Output
+(base) evan@evan-VirtualBox:~/COMP630/git-practice$ cd ..
+(base) evan@evan-VirtualBox:~/COMP630$ ls
+git-practice
+(base) evan@evan-VirtualBox:~/COMP630$ cd git-practice/
+(base) evan@evan-VirtualBox:~/COMP630/git-practice$ ls
+editor.md  generate.sh  grading.sh  LICENSE  README.md
+(base) evan@evan-VirtualBox:~/COMP630/git-practice$ touch git-practice-output
+(base) evan@evan-VirtualBox:~/COMP630/git-practice$ 
+(base) evan@evan-VirtualBox:~/COMP630/git-practice$ git checkout A
+Branch 'A' set up to track remote branch 'A' from 'origin'.
+Switched to a new branch 'A'
+(base) evan@evan-VirtualBox:~/COMP630/git-practice$ git log
+commit b99f5fef9d96707b4f9c1a2fd62a105cb86c3213 (HEAD -> A, origin/A)
+Author: Dan Couture <mathyourlife@gmail.com>
+Date:   Wed Mar 1 06:20:15 2017 -0500
+
+    new engineer 3
+
+commit 342e2dfb7fd50e1d6cf5e09e0bff9878d573820c
+Author: Dan Couture <mathyourlife@gmail.com>
+Date:   Wed Mar 1 06:20:09 2017 -0500
+
+    new engineer 2
+
+commit a8c3582817b68a44506374069dfaee168ba2a9d5
+Author: Dan Couture <mathyourlife@gmail.com>
+Date:   Wed Mar 1 06:20:00 2017 -0500
+
+    new engineer 1
+
+commit 95cbf4a12d20507ae4131be6aa58f7f54fd4de03
+Author: Dan Couture <mathyourlife@gmail.com>
+Date:   Wed Mar 1 06:19:37 2017 -0500
+
+    veteran work 3
+
+commit d41cdf3dfd2ae22890eff0e7750f8fc4b9db875f
+Author: Dan Couture <mathyourlife@gmail.com>
+Date:   Wed Mar 1 06:19:30 2017 -0500
+
+    veteran work 2
+
+commit 6bbcedafb3dd7c74827a76d0a1c755550ef58109
+Author: Dan Couture <mathyourlife@gmail.com>
+Date:   Wed Mar 1 06:19:21 2017 -0500
+
+    veteran work 1
+
+commit bac04980e60ccce308eb652d193f15257cc5b56f (origin/K)
+Author: Dan Couture <mathyourlife@gmail.com>
+Date:   Wed Mar 1 06:14:19 2017 -0500
+
+    Adding exercises to README.md
+
+commit 06d31dae6ebf4f0a53eefee778389824dd649fd2
+Author: Dan Couture <MathYourLife@users.noreply.github.com>
+Date:   Wed Mar 1 06:11:49 2017 -0500
+
+    Initial commit
+(base) evan@evan-VirtualBox:~/COMP630/git-practice$ git reset HEAD~3
+(base) evan@evan-VirtualBox:~/COMP630/git-practice$ git log
+commit 95cbf4a12d20507ae4131be6aa58f7f54fd4de03 (HEAD -> A)
+Author: Dan Couture <mathyourlife@gmail.com>
+Date:   Wed Mar 1 06:19:37 2017 -0500
+
+    veteran work 3
+
+commit d41cdf3dfd2ae22890eff0e7750f8fc4b9db875f
+Author: Dan Couture <mathyourlife@gmail.com>
+Date:   Wed Mar 1 06:19:30 2017 -0500
+
+    veteran work 2
+
+commit 6bbcedafb3dd7c74827a76d0a1c755550ef58109
+Author: Dan Couture <mathyourlife@gmail.com>
+Date:   Wed Mar 1 06:19:21 2017 -0500
+
+    veteran work 1
+
+commit bac04980e60ccce308eb652d193f15257cc5b56f (origin/K)
+Author: Dan Couture <mathyourlife@gmail.com>
+Date:   Wed Mar 1 06:14:19 2017 -0500
+
+    Adding exercises to README.md
+
+commit 06d31dae6ebf4f0a53eefee778389824dd649fd2
+Author: Dan Couture <MathYourLife@users.noreply.github.com>
+Date:   Wed Mar 1 06:11:49 2017 -0500
+
+    Initial commit
+(base) evan@evan-VirtualBox:~/COMP630/git-practice$ git checkout C
+Branch 'C' set up to track remote branch 'C' from 'origin'.
+Switched to a new branch 'C'
+(base) evan@evan-VirtualBox:~/COMP630/git-practice$ git merge origin/B
+Merge made by the 'recursive' strategy.
+ branch-B-work/hello-world.txt | 1 +
+ branch-B-work/new-feature.txt | 1 +
+ 2 files changed, 2 insertions(+)
+ create mode 100644 branch-B-work/hello-world.txt
+ create mode 100644 branch-B-work/new-feature.txt
+(base) evan@evan-VirtualBox:~/COMP630/git-practice$ git checkout E
+Branch 'E' set up to track remote branch 'E' from 'origin'.
+Switched to a new branch 'E'
+
+
